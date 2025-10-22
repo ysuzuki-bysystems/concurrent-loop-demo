@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Concurrent loop Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Concurrent loop Demo</h1>
+    <form>
+      <label for="n">N</label>
+      <div>
+        <input id="n" required type="number" min="1" value="10000" />
+      </div>
+
+      <label for="workers">Workers</label>
+      <div>
+        <input id="workers" required type="number" min="1" max="128" value="10" />
+      </div>
+
+      <label for="strategy">Strategy</label>
+      <select id="strategy">
+        <option value="no-lock" selected>No lock</option>
+        <option value="mutex">Mutex</option>
+        <option value="cas">Compare And Swap</option>
+      </select>
+
+      <button>Start</button>
+    </form>
+    <pre><output></output></pre>
+
+    <script src="coi-serviceworker.min.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

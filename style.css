@@ -1,0 +1,23 @@
+:root {
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: auto;
+  width: 32em;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 4em 1fr;
+  gap: 1ex;
+}
+
+label,
+input[type=number] {
+  text-align: right;
+}
+
+input[type=number] {
+  width: 8em;
+}
